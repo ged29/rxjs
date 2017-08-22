@@ -1,10 +1,7 @@
-import * as Rx from "rxjs";
+import { debounce, sendRequest } from "./ch4/debounce2"
 
-var observable = Rx.Observable.create(observer => {
-    observer.onNext('Simon');
-    observer.onNext('Jen');
-    observer.onNext('Sergi');
-    observer.onCompleted(); // We are done
+let debounced = debounce(sendRequest, 1000);
+
+document.getElementById("query").addEventListener("keyup", event => {
+    debounced((event.target as HTMLInputElement).value);
 });
-
-//observable.
