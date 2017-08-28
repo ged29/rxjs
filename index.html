@@ -9,7 +9,7 @@
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script>
         var paths = { "rxjs": "node_modules/rxjs/bundles/Rx.min.js" };
-        System.config({ 
+        System.config({
             paths: paths,
             packages: { "": {} }
         });
@@ -18,8 +18,11 @@
 </head>
 
 <body class="m-a-1">
-    <input id="query"/><br/>
-    <div><ul id="result"></ul></div>
+    <input id="query" /><br/>
+    <div>
+        <ul id="result"></ul>
+    </div>
+    <div id="count"></div>
 </body>
 
 </html>

@@ -1,8 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const debounce2_1 = require("./ch4/debounce2");
-let debounced = debounce2_1.debounce(debounce2_1.sendRequest, 1000);
-document.getElementById("query").addEventListener("keyup", event => {
-    debounced(event.target.value);
-});
+const _5_3_wikiSearch_1 = require("./ch5/5.3_wikiSearch");
+var search = new _5_3_wikiSearch_1.default();
 //# sourceMappingURL=test.js.map

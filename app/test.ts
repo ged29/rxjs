@@ -1,7 +1,3 @@
-import { debounce, sendRequest } from "./ch4/debounce2"
+import WikiSearch from "./ch5/5.3_wikiSearch"
 
-let debounced = debounce(sendRequest, 1000);
-
-document.getElementById("query").addEventListener("keyup", event => {
-    debounced((event.target as HTMLInputElement).value);
-});
+var search = new WikiSearch();
